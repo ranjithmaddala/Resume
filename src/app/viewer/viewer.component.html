@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="welcome">
+                <fieldset>
+                    <legend>Welcome</legend>
+                    <h3>Hi, happy to see you here!</h3>
+                    <br>
+                    <form action="" [formGroup]="viewerForm" (ngSubmit) = "addViewer">
+                        <input type="text" placeholder="please enter your name" class="form-control" [(ngModel)]="viewerName" formControlName="viewerName">
+                        <br>
+                        <button type="submit" class="btn btn-primary" (click)="onButtonClick()" [disabled]="!viewerName">
+                          continue>>
+                        </button>
+                    </form>
+
+                </fieldset>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
